@@ -103,11 +103,11 @@ class SocialGraph:
             new_user= path[-1]
             if new_user not in visited:
                 visited[new_user]= path #as new value
-                for i in self.friendships[new_user]:
-                    if i not in visited:
-                        new_path = list(path)
-                        new_path.append(i)
-                        q.enqueue(new_path)
+                for neighbor in self.friendships[new_user]:
+                             
+                    new_path = list(path)
+                    new_path.append(neighbor)
+                    q.enqueue(new_path)
         
         return visited
 

@@ -9,3 +9,4 @@ class Player:
                 next_room.print_room_description(self)
         else:
             print("You cannot move in that direction.")
+            # bfs to go back to find the nearest room with exit.
